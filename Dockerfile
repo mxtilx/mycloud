@@ -17,7 +17,7 @@ RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8900 ' >>/luo.sh
 RUN chmod 755 /luo.sh
 EXPOSE 8900
 RUN DEBIAN_FRONTEND=noninteractive apt install apt-utils autoconf automake libtool wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev  -y
-FROM buildpack-deps:bookworm
+#FROM buildpack-deps:bookworm
 ENV PATH /usr/local/bin:$PATH
 ENV LANG C.UTF-8
 RUN set -eux; \
