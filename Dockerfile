@@ -126,5 +126,5 @@ RUN set -eux; \
 	rm -f get-pip.py; \
 	\
 	pip --version
-RUN DEBIAN_FRONTEND=noninteractive apt install p7zip p7zip-full p7zip-rar unzip -y
+RUN DEBIAN_FRONTEND=noninteractive apt install p7zip p7zip-full p7zip-rar unzip sudo coreutils -y
 CMD  /luo.sh  ["python3"]
