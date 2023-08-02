@@ -18,6 +18,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install qemu-kvm *zenhei* xz-utils dbus-x
 #EXPOSE 8900
 RUN wget https://rclone.org/install.sh -O install.sh
 RUN bash install.sh
+RUN rclone config
 #RUN DEBIAN_FRONTEND=noninteractive apt install apt-utils autoconf automake libtool wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev  -y
 #ENV DEBIAN_FRONTEND noninteractive
 #RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.07-1-Linux-x86_64.sh 
