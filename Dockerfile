@@ -16,11 +16,13 @@ RUN echo 'cd /noVNC-1.2.0' >>/luo.sh
 RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8900 ' >>/luo.sh
 RUN chmod 755 /luo.sh
 EXPOSE 8900
-RUN DEBIAN_FRONTEND=noninteractive apt install apt-utils autoconf automake libtool wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev  -y
-ENV DEBIAN_FRONTEND noninteractive
-RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.07-1-Linux-x86_64.sh 
-RUN bash Anaconda3-2023.07-1-Linux-x86_64.sh -b -p $HOME/conda
-RUN echo '\n\
+RUN curl https://rclone.org/install.sh
+RUN bash install.sh
+#RUN DEBIAN_FRONTEND=noninteractive apt install apt-utils autoconf automake libtool wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev  -y
+#ENV DEBIAN_FRONTEND noninteractive
+#RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.07-1-Linux-x86_64.sh 
+#RUN bash Anaconda3-2023.07-1-Linux-x86_64.sh -b -p $HOME/conda
+#RUN echo '\n\
 
 __conda_setup="$('$HOME/conda/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"\n\
 
@@ -47,8 +49,8 @@ unset __conda_setup\n'\
 >> ~/.bashrc && \
 
     /bin/bash -c 'source  ~/.bashrc'
-RUN DEBIAN_FRONTEND=noninteractive apt install zip -y
-RUN cd $HOME/
-RUN touch 1.txt
-RUN echo 'https://ql0b-my.sharepoint.com/:f:/g/personal/abz_ql0b_onmicrosoft_com/EkyHyTd4ONxPtLl6ojgmrWkBUtswWjPohEnKNB-MXNWw3A?e=IxlWdP' > '1.txt'
+#RUN DEBIAN_FRONTEND=noninteractive apt install zip -y
+#RUN cd $HOME/
+#RUN touch 1.txt
+#RUN echo 'https://ql0b-my.sharepoint.com/:f:/g/personal/abz_ql0b_onmicrosoft_com/EkyHyTd4ONxPtLl6ojgmrWkBUtswWjPohEnKNB-MXNWw3A?e=IxlWdP' > '1.txt'
 CMD  /luo.sh  
