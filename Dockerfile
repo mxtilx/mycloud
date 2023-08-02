@@ -49,6 +49,7 @@ unset __conda_setup\n'\
 >> ~/.bashrc && \
 
     /bin/bash -c 'source  ~/.bashrc'
+RUN conda create --name sd python=3.8
 RUN DEBIAN_FRONTEND=noninteractive apt install zip -y
 RUN cd $HOME/
 RUN touch 1.txt
