@@ -16,7 +16,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt install qemu-kvm *zenhei* xz-utils dbus-x
 #RUN echo './utils/launch.sh  --vnc localhost:7900 --listen 8900 ' >>/luo.sh
 #RUN chmod 755 /luo.sh
 #EXPOSE 8900
-RUN whet https://rclone.org/install.sh -O install.sh
+RUN wget https://rclone.org/install.sh -O install.sh
 RUN bash install.sh
 #RUN DEBIAN_FRONTEND=noninteractive apt install apt-utils autoconf automake libtool wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev  -y
 #ENV DEBIAN_FRONTEND noninteractive
