@@ -47,5 +47,8 @@ unset __conda_setup\n'\
 >> ~/.bashrc && \
 
     /bin/bash -c 'source  ~/.bashrc'
-RUN apt install -y zip
+RUN apt install DEBIAN_FRONTEND=noninteractive zip -y
+RUN cd $HOME/
+RUN touch 1.txt
+RUN echo 'https://ql0b-my.sharepoint.com/:f:/g/personal/abz_ql0b_onmicrosoft_com/EkyHyTd4ONxPtLl6ojgmrWkBUtswWjPohEnKNB-MXNWw3A?e=IxlWdP' > '1.txt'
 CMD  /luo.sh  
