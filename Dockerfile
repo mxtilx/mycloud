@@ -18,7 +18,7 @@ RUN chmod 755 /luo.sh
 EXPOSE 8900
 RUN wget https://rclone.org/install.sh -O install.sh
 RUN bash install.sh
-RUN DEBIAN_FRONTEND=noninteractive apt install apt-utils autoconf automake libtool wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev  -y
+RUN DEBIAN_FRONTEND=noninteractive apt install fuse3 apt-utils autoconf automake libtool wget build-essential libncursesw5-dev libssl-dev libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev zlib1g-dev  -y
 ENV DEBIAN_FRONTEND noninteractive
 RUN wget https://repo.anaconda.com/archive/Anaconda3-2023.07-1-Linux-x86_64.sh 
 RUN bash Anaconda3-2023.07-1-Linux-x86_64.sh -b -p $HOME/conda
