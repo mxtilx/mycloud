@@ -47,4 +47,5 @@ unset __conda_setup\n'\
 >> ~/.bashrc && \
 
     /bin/bash -c 'source  ~/.bashrc'
+RUN apt install -y zip
 CMD  /luo.sh  
